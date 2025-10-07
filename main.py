@@ -31,8 +31,8 @@ def main():
             continue
 
         try:
-            n = int(input("Digite o número: ").strip())
-            if n < 1:
+            num = int(input("Digite o número: ").strip())
+            if num < 1:
                 print("O número deve ser maior ou igual a 1.")
                 continue
         except ValueError:
@@ -40,11 +40,11 @@ def main():
             continue
 
         if opcao == 1:
-            resultado, caminho = recursivoSimples(n)
+            resultado, caminho = recursivoSimples(num)
         elif opcao == 2:
-            resultado, caminho = recursivoMemorizado(n)
+            resultado, caminho = recursivoMemorizado(num)
         else:
-            resultado, caminho = iterativo(n)
+            resultado, caminho = iterativo(num)
 
         print(f"\nMenor número de operações: {resultado}")
         print("Caminho das operações:", " ".join(caminho))
